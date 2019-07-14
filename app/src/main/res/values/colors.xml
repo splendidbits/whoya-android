@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/whoya_dark</color>
+    <color name="colorPrimaryDark">@color/whoya_dark</color>
+    <color name="colorAccent">@color/whoya_purple</color>
+
+    <color name="whoya_dark">#0F0F21</color>
+    <color name="whoya_purple">#542BA4</color>
+    <color name="whoya_light">#E4E8EB</color>
+
+    <color name="call_log_text_color">#545454</color>
+
+</resources>

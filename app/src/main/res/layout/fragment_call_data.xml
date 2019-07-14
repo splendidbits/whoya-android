@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/history_fragment_root"
+        android:background="@color/whoya_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.splendidbits.whoya.fragment.HistoryFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/call_data_recycler_view"
+            android:layout_margin="@dimen/call_log_recycler_margin"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</RelativeLayout>

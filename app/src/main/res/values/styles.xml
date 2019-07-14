@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppStyle" parent="Theme.Design.Light">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/whoya_purple</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+        <item name="actionBarStyle">@style/AppStyle.ToolbarStyle</item>
+        <item name="toolbarStyle">@style/AppStyle.ToolbarStyle</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+
+    </style>
+
+    <style name="AppStyle.ToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/whoya_purple</item>
+        <item name="android:popupElevation">6dp</item>
+        <item name="title">@string/fragment_history_toolbar_title</item>
+        <item name="titleTextColor">@android:color/white</item>
+        <item name="colorControlNormal">@color/whoya_purple</item>
+        <item name="popupTheme">@style/AppStyle.ToolbarStyle.PopupMenu</item>
+        <item name="popupMenuStyle">@style/AppStyle.ToolbarStyle.PopupMenu</item>
+        <item name="titleMarginStart">32dp</item>
+    </style>
+
+    <style name="AppStyle.ToolbarStyle.TextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:text">@string/app_name</item>
+    </style>
+
+    <style name="AppStyle.ToolbarStyle.PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:actionMenuTextColor">@color/whoya_purple</item>
+        <item name="android:textColor">@color/whoya_light</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="AppStyle.CallLogCardStyle" parent="Theme.AppCompat">
+        <item name="android:clickable">true</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="cardCornerRadius">@dimen/call_log_card_corner_radius</item>
+        <item name="android:layout_margin">@dimen/call_log_card_outer_margin</item>
+        <item name="android:padding">@dimen/call_log_card_inner_padding</item>
+    </style>
+
+    <style name="AppStyle.CallLogTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/call_log_card_text_padding</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textIsSelectable">false</item>
+        <item name="android:textColor">@color/call_log_text_color</item>
+        <item name="android:textSize">@dimen/call_log_text_size</item>
+    </style>
+
+</resources>
