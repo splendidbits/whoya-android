@@ -19,7 +19,7 @@ class HistoryRecyclerAdapter(val context: Context) : RecyclerView.Adapter<CallHi
     }
 
     override fun getItemId(position: Int): Long {
-        return callDataList.get(position).date.time
+        return callDataList.get(position).id
     }
 
     override fun setHasStableIds(hasStableIds: Boolean) {
@@ -30,6 +30,7 @@ class HistoryRecyclerAdapter(val context: Context) : RecyclerView.Adapter<CallHi
         val item = callDataList.get(position)
         viewHolder.name.text = context.getString(R.string.call_unknown_number)
         viewHolder.number.text = item.number
+        viewHolder.time.text = item.date
 
         when(item.type) {
             CallType.CALL_INCOMING ->

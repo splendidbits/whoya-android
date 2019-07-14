@@ -1,10 +1,9 @@
 package com.splendidbits.whoya.model
 
-import java.util.*
-
 data class CallData(
+    val id: Long,
     val name: String,
     val type: CallType,
     val number: String,
-    val date: Date
+    val date: String
 )

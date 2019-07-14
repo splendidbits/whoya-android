@@ -8,6 +8,7 @@ import com.splendidbits.whoya.model.CallData
 import com.splendidbits.whoya.model.CallType
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
+import java.text.DateFormat
 import java.util.*
 
 
@@ -54,6 +55,13 @@ class CallDataRepository(val context: Context) {
                     else -> CallType.CALL_MISSED
                 }
 
+                val dateFormattingScheme = "yyyy-MM-dd hh:mm:ss a"
+                val dateFormatter = DateFormat.getInstance()
+
+                val callDate = Date()
+                callDate.time = epoch?.toLong() ?: callDate.time
+                val formattedDate = dateFormatter.format(callDate)
+
                 val formattedNumber = PhoneNumberUtils.formatNumberToE164(number, "US")
                 val newNumber = if (!formattedNumber.isNullOrBlank()) {
                     formattedNumber
@@ -66,9 +74,10 @@ class CallDataRepository(val context: Context) {
                 date.time = epoch?.toLong() ?: date.time
 
                 callDataList.add(CallData(
+                    id = callDate.time,
                     name = name ?: "",
                     type = enumType,
-                    date = date,
+                    date = formattedDate,
                     number = newNumber ?: ""
                 ))
             }
