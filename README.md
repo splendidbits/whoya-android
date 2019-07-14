@@ -1,6 +1,6 @@
 ## whoya-android
 
-![whoya_logo](/Users/daniel/Desktop/whoya_logo.png)
+![whoya_logo](whoya_logo.png)
 
 
 
