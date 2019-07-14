@@ -1,7 +1,6 @@
 package com.splendidbits.whoya.adapter
 
 import android.content.Context
-import android.telephony.PhoneNumberUtils
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -30,15 +29,7 @@ class HistoryRecyclerAdapter(val context: Context) : RecyclerView.Adapter<CallHi
     override fun onBindViewHolder(viewHolder: CallHistoryViewHolder, position: Int) {
         val item = callDataList.get(position)
         viewHolder.name.text = context.getString(R.string.call_unknown_number)
-
-        // Some really basic number formatting
-        // TODO: Move to testable helper
-        val formattedNumber = PhoneNumberUtils.formatNumberToE164(item.number, "US")
-        viewHolder.number.text = if (!formattedNumber.isNullOrBlank()) {
-            formattedNumber
-        } else {
-            PhoneNumberUtils.formatNumber(item.number, "US")
-        }
+        viewHolder.number.text = item.number
 
         when(item.type) {
             CallType.CALL_INCOMING ->

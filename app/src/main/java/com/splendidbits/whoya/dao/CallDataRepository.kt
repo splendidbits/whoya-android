@@ -2,6 +2,7 @@ package com.splendidbits.whoya.dao
 
 import android.content.Context
 import android.provider.CallLog
+import android.telephony.PhoneNumberUtils
 import androidx.lifecycle.MutableLiveData
 import com.splendidbits.whoya.model.CallData
 import com.splendidbits.whoya.model.CallType
@@ -53,6 +54,14 @@ class CallDataRepository(val context: Context) {
                     else -> CallType.CALL_MISSED
                 }
 
+                val formattedNumber = PhoneNumberUtils.formatNumberToE164(number, "US")
+                val newNumber = if (!formattedNumber.isNullOrBlank()) {
+                    formattedNumber
+                } else {
+                    PhoneNumberUtils.formatNumber(number, "US")
+                }
+
+
                 val date = Date()
                 date.time = epoch?.toLong() ?: date.time
 
@@ -60,7 +69,7 @@ class CallDataRepository(val context: Context) {
                     name = name ?: "",
                     type = enumType,
                     date = date,
-                    number = number ?: ""
+                    number = newNumber ?: ""
                 ))
             }
             cursor?.close()
