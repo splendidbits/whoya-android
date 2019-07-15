@@ -45,10 +45,7 @@
     </style>
 
     <style name="AppStyle.CallLogTextStyle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">@dimen/call_log_card_text_padding</item>
-        <item name="android:layout_gravity">center_vertical</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:singleLine">true</item>
         <item name="android:textStyle">normal</item>
@@ -58,15 +55,22 @@
         <item name="android:textSize">@dimen/call_log_text_size</item>
     </style>
 
-    <style name="AppStyle.CallLogDateTextStyle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="AppStyle.CallLogNameTextStyle">
         <item name="android:layout_margin">@dimen/call_log_card_text_padding</item>
-        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textIsSelectable">false</item>
+        <item name="android:textColor">@color/call_log_text_color</item>
+        <item name="android:textSize">@dimen/call_log_name_size</item>
+    </style>
+
+    <style name="AppStyle.CallLogDateTextStyle">
+        <item name="android:layout_margin">@dimen/call_log_card_text_padding</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:singleLine">true</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:letterSpacing">0.02</item>
         <item name="android:textIsSelectable">false</item>
         <item name="android:textColor">@color/call_log_text_color</item>
         <item name="android:textSize">@dimen/call_log_date_text_size</item>

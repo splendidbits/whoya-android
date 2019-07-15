@@ -22,6 +22,8 @@
     <dimen name="call_log_recycler_margin">8dp</dimen>
 
     <dimen name="call_log_text_size">16sp</dimen>
+    <dimen name="call_log_name_size">16sp</dimen>
+    <dimen name="call_log_number_size">16sp</dimen>
     <dimen name="call_log_date_text_size">12sp</dimen>
 
 </resources>

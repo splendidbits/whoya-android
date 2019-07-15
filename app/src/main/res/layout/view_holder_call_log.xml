@@ -16,20 +16,23 @@
         <LinearLayout
                 android:id="@+id/call_log_date_container"
                 android:orientation="vertical"
+                android:gravity="end"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true">
 
             <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/call_log_date"
                     style="@style/AppStyle.CallLogDateTextStyle"
+                    android:id="@+id/call_log_date"
+                    android:gravity="end"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
             <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/call_log_type"
                     style="@style/AppStyle.CallLogTextStyle"
+                    android:id="@+id/call_log_type"
+                    android:gravity="end"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -45,7 +48,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/call_log_name_view"
-                    style="@style/AppStyle.CallLogTextStyle"
+                    style="@style/AppStyle.CallLogNameTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
